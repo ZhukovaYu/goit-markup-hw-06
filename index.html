@@ -410,39 +410,36 @@
                     <use href="./images/sprite.svg#icon-close-button"></use>
                 </svg>
             </button>
-            <form class="contact-form">
+            <form class="main-contact-form">
                 <div class="contact-form-wrap">
                 <h2 class="contact-form-title">
                     Залиште свої дані, ми вам передзвонимо</h2>
+                    
                 <div class="contact-form">
-                    <label for="usen-name" class="contact-form-label">Ім'я</label>
-                    <div class="input-wrap"> 
+                        <label for="user-name" class="contact-form-label">Ім'я</label>
                         <input class="contact-form-input" 
                         type="text" name="user-name" id="user-name">
-                        <svg width="12px" height="12px" class="icon-contact-form-user">
+                        <svg width="12px" height="12px" 
+                             class="icon-contact-form-user">
                             <use href="./images/sprite.svg#icon-person-black"></use>
                         </svg>
-                    </div>
                 </div>
+
                 <div class="contact-form">
                     <label for="user-tel" class="contact-form-label">Телефон</label>
-                    <div class="input-wrap">
-                        <input class="contact-form-input" 
+                    <input class="contact-form-input" 
                         type="tel" name="user-tel" id="user-tel">
-                        <svg width="13px" height="13px" class="icon-contact-form-user">
-                            <use href="./images/sprite.svg#icon-phone-black"></use>
-                        </svg>
-                    </div>
+                    <svg width="13px" height="13px" class="icon-contact-form-user">
+                        <use href="./images/sprite.svg#icon-phone-black"></use>
+                    </svg>
                 </div>
                 <div class="contact-form">
                     <label for="user-mail" class="contact-form-label">Пошта</label>
-                    <div class="input-wrap">
                     <input class="contact-form-input" 
-                    type="email" name="user-mail" id="user-mail">
+                        type="email" name="user-mail" id="user-mail">
                     <svg width="15px" height="12px" class="icon-contact-form-user">
                         <use href="./images/sprite.svg#icon-email-black"></use>
                     </svg>
-                    </div>
                 </div>
                 <div class="comment-box">
                     <label for="comment" class="contact-form-label">Коментар</label>
@@ -451,17 +448,19 @@
                 </div>
 
                 <div class="checkbox-form">
+                    <label for="check" class="checkbox-form-label">
                     <div class="checkbox-border">
-                    <input type="checkbox" class="checkbox-form-input is-hidden" 
+                        <input type="checkbox" class="checkbox-form-input" 
                             name="check" id="check">
-                    <svg class="check-icon" width="11px" height="8px">
-                        <use href="./images/sprite.svg#icon-check"></use>
-                    </svg>
+                        <svg class="check-icon" width="15px" height="15px">
+                          <use href="./images/sprite.svg#icon-check"></use>
+                        </svg>
                     </div>
-                    <label for="check" class="checkbox-form-label">Погоджуюся з розсилкою та приймаю
+                     Погоджуюся з розсилкою та приймаю
                         <span><a href="" class="checkbox-text">Умови договору</a></span></label>
+                </label>
                 </div>
-                    <button class="send-button button" type="submit">Відправити</button>
+                <button class="send-button button" type="submit">Відправити</button>
             </div>
             </form>
         </div>

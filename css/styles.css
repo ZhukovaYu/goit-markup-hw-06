@@ -220,8 +220,10 @@ header {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
     transition:
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .button:focus, 
@@ -734,26 +736,35 @@ footer {
 .close-button:hover,
 .close-button:focus {
     fill:#188CE8;
-
 } 
 
 .contact-form-wrap {
     display: flex;
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
+    gap:10px;
+    width: 100%;
 }
 
-label {
-    position: relative;
-}
+ 
 
 .contact-form-title{
     font-size: 20px;
     line-height: 1.15;
     text-align: center;
     letter-spacing: 0.03em;
-    margin-bottom: 12px;
+}
+
+.contact-form{
+    position: relative;   
+}
+
+.contact-form-label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: #757575;
+    margin-bottom: 4px;
 }
 
 .contact-form-input {
@@ -763,58 +774,43 @@ label {
     border: 1px solid 
     rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-}
-
-.input-wrap {
-    position: relative;
-    flex-basis: calc((100% - 14px) / 2);
-    margin-bottom: 10px;
-    transition: fill 250ms 
-        cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.contact-form-input:hover,
-.contact-form-input:focus,
-.contact-form-input:active 
-.input-wrap:focus,
-.input-wrap:hover,
-.input-wrap:active {
-    fill:#188CE8;
-    border: 1px solid #188CE8;
-    border-radius: 4px;
+    transition: border 250ms 
+    cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-contact-form-user{
-    position:absolute;
-    top:14px;
-    left:14px;
+    position: absolute;
+    top: 55%;
+    left: 14px;
+    transition: fill 250ms 
+    cubic-bezier(0.4, 0, 0.2, 1),
+    box-shaddow 250ms 
+    cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-form-label{
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.16;    
-    letter-spacing: 0.01em;
-    color: currentColor;
-    margin-bottom: 4px;
+ .contact-form:focus-within .icon-contact-form-user,
+ .contact-form:hover .icon-contact-form-user,
+ .contact-form:focus .icon-contact-form-user {
+    fill: #188CE8;
+    
+ }
+
+.contact-form-input:focus,
+.contact-form-input:hover {
+    outline-color: #2196F3;
+    border-color: transparent;
+    box-shadow: 0 0 0 1px #2196F3;
 }
 
 .comment-box .contact-form-input {
     height: 120px;
     padding: 14px;
-    margin-bottom: 20px;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.15;
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
     resize: none;
-}
-
-.checkbox-form-input.is-hidden{
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none
 }
 
 .checkbox-border{
@@ -825,9 +821,6 @@ label {
     height:15px;
     border:1px solid #212121;
     border-radius: 2px;
-}
-.checkbox-border:active {
-    background: var(--accent-color);
 }
 
 .checkbox-text {
@@ -841,10 +834,14 @@ label {
     gap:7px;
     justify-content: center;
     align-items: center;
-    margin-bottom:  30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .checkbox-form-label{
+    display: flex;
+    align-items: center;
+    gap:7px;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
@@ -852,8 +849,16 @@ label {
     color: var(--secondary-text-color);
 }
 
+.checkbox-form-input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
 .checkbox-form-input:checked + .check-icon{
-background-color: #2196F3;
+    background-color: #188CE8;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px #2196F3;
 }
 
 .send-button {
@@ -864,5 +869,4 @@ background-color: #2196F3;
     height: 50px;
     margin-left: auto;
     margin-right: auto;
-
 }
