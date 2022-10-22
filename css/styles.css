@@ -656,13 +656,19 @@ footer {
 .subscribe-form-box {
     width: 358px;
     height: 50px;
+    padding: 15px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
-}
-.subscribe-form {
-    padding:15px;
-    width: 100%;
+    background: #2F303A;
+    font-weight: 400;
+    font-size: 16px;
+        
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .subscribe-button{
@@ -830,7 +836,7 @@ label {
     color: var(--accent-color);
 }
 
-.checkbox-form{
+.checkbox-form {
     display: flex;
     gap:7px;
     justify-content: center;
@@ -845,6 +851,11 @@ label {
     letter-spacing: 0.03em;
     color: var(--secondary-text-color);
 }
+
+.checkbox-form-input:checked + .check-icon{
+background-color: #2196F3;
+}
+
 .send-button {
     display: flex;
     justify-content: center;
